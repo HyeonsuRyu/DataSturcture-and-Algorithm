@@ -44,27 +44,19 @@ void Clear(IntStack *s){
 }
 
 int Capacity(const IntStack *s){
-  printf("Capacity: %d\n", s->max);
-  return 0;
+  return s->max;
 }
 
 int Size(const IntStack *s){
-  printf("Size: %d\n", s->ptr);
-  return 0;
+  return s->ptr;
 }
 
 int IsEmpty(const intStack *s){
-  if(s->ptr==0){
-    return 1;
-  }
-  return 0;
+  return s->ptr <= 0;
 }
 
 int IsFull(const IntStack *s){
-  if(s->ptr>=s->max){
-    return 1;
-  }
-  return 0;
+  return s->ptr>=s->max;
 }
 
 int Search(const IntStack *s, int x){
